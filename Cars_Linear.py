@@ -10,18 +10,6 @@ ohe=OneHotEncoder()
 le=LabelEncoder()
 data=pd.read_csv("CarPrice_Assignment.csv")
 
-"""
-def le_fuc(data,list):
-    list1=[]
-    for x in list:
-        list1=data.iloc[:,x].values
-        list1=le.fit_transform(list1)
-        np.array(list1.reshape(-1,1))
-        print(list1)
-list1=[3,4]
-le_fuc(data,list1)
-"""
-
 fueltype= data.iloc[:,3].values
 fueltype=le.fit_transform(fueltype)
 fueltype=pd.DataFrame(fueltype)
